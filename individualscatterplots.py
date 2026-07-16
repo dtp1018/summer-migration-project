@@ -6,7 +6,7 @@ from uploadingcsvfile import new_dataset
 from cleaningdata2 import new_excluded_dataset
 
 species_list = new_excluded_dataset['SCIENTIFIC_NAME'].unique()
-fig, axes = plt.subplots(2, 4, figsize=(18, 10), sharex=True, sharey=True)
+fig, axes = plt.subplots(2, 4, figsize=(18, 10), sharex=False, sharey=False)
 axes = axes.flatten()
 
 for ax, species in zip(axes, species_list):
@@ -29,5 +29,5 @@ for ax in axes[len(species_list):]:
 fig.suptitle("Population Trends by Species", fontsize=16)
 
 plt.tight_layout()
-plt.savefig("SpeciesScatterplotsWithRegression.png", dpi=300)
+plt.savefig("Plots/SpeciesScatterplotsWithRegression.png", dpi=300)
 plt.show()

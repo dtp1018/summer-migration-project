@@ -29,5 +29,5 @@ for ax in axes[len(species_list):]:
 fig.suptitle("Population Trends by Species", fontsize=16)
 
 plt.tight_layout()
-plt.savefig("SpeciesScatterplotsLOWESS.png", dpi=300)
+plt.savefig("Plots/SpeciesScatterplotsLOWESS.png", dpi=300)
 plt.show()
